@@ -20,15 +20,23 @@ alias gcb="git checkout -b"
 alias gbd="git branch -d"
 alias gbD="git branch -D"
 
-# Other aliases
-alias ngrok="~/ngrok"
-alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-
+# Install utilities, if missing
 if [[ ! -a ~/antigen.zsh ]]; then
   echo "Installing antigen..."
   curl -L git.io/antigen > ~/antigen.zsh
 fi
+if [[ ! -a ~/ngrok ]]; then
+  echo "Installing ngrok..."
+  curl -L https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > ~/ngrok.zip
+  unzip ~/ngrok.zip
+  rm -f ~/ngrok.zip
+fi
 
+# Other aliases
+alias ngrok="~/ngrok"
+alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# Load antigen
 source ~/antigen.zsh
 
 # Export env vars
