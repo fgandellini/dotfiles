@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "abusaidm.html-snippets",
+    "akamud.vscode-javascript-snippet-pack",
+    "akamud.vscode-theme-onedark",
+    "dbaeumer.vscode-eslint",
+    "DotJoshJohnson.xml",
+    "eg2.tslint",
+    "esbenp.prettier-vscode",
+    "GitHub.vscode-pull-request-github",
+    "jpoissonnier.vscode-styled-components",
+    "mjmcloug.vscode-elixir",
+    "ms-python.python",
+    "ms-vscode.azure-account",
+    "nwolverson.language-purescript",
+    "PeterJausovec.vscode-docker",
+    "WallabyJs.quokka-vscode",
+    "xabikos.JavaScriptSnippets",
+    "xabikos.ReactSnippets"
+  ]
+}
