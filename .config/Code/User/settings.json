@@ -1,0 +1,16 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.formatOnSave": false,
+    "editor.tabSize": 2,
+    "prettier.tabWidth": 2,
+    "prettier.singleQuote": true,
+    "prettier.semi": false,
+    "window.zoomLevel": 0,
+    "extensions.ignoreRecommendations": false,
+    "workbench.colorTheme": "Atom One Dark",
+    "window.titleBarStyle": "custom",
+    "breadcrumbs.enabled": false,
+    "python.jediEnabled": false
+}
