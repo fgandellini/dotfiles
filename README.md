@@ -1,4 +1,4 @@
-# Dotfiles
+# dotfiles
 
 This is my dotfiles repo.
 
@@ -14,7 +14,7 @@ cd $HOME/.dotfiles
 ./restore-dotfiles.sh
 ```
 
-you can then manage dotfiles with the `dotfiles` command:
+Manage dotfiles with the `dotfiles` command:
 
 ```
 dotfiles status
