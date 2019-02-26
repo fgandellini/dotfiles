@@ -6,12 +6,10 @@ It follows the approach described [here](https://developer.atlassian.com/blog/20
 
 ## Usage
 
-Restore dthis repo with:
+Restore this repo with:
 
 ```
-git clone --bare https://github.com/fgandellini/dotfiles $HOME/.dotfiles
-cd $HOME/.dotfiles
-./restore-dotfiles.sh
+curl -Lks https://git.io/fhNv1 | /bin/bash
 ```
 
 Manage dotfiles with the `dotfiles` command:
