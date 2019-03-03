@@ -22,3 +22,19 @@ dotfiles add .zshrc
 dotfiles commit -m "Add zshrc"
 dotfiles push
 ```
+
+### Visual Studio Code Extensions
+
+Visual Studio Code extensions needs to be manually updated/restored.
+
+Save the current list with:
+
+```
+code --list-extensions | xargs -L 1 echo code --install-extension > vscode-extensions
+```
+
+Restore extensions with:
+
+```
+./update-vscode-extensions
+```
