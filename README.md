@@ -36,5 +36,5 @@ code --list-extensions | xargs -L 1 echo code --install-extension > vscode-exten
 Restore extensions with:
 
 ```
-./update-vscode-extensions
+./vscode-extensions
 ```
