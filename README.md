@@ -9,7 +9,7 @@ It follows the approach described [here](https://developer.atlassian.com/blog/20
 Restore this repo with:
 
 ```
-curl -Lks https://git.io/fhNv1 | /bin/bash
+curl -Lks https://git.io/fhxJj | /bin/bash
 ```
 
 Manage dotfiles with the `dotfiles` command:
