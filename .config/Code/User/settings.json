@@ -12,5 +12,17 @@
     "workbench.colorTheme": "Atom One Dark",
     "window.titleBarStyle": "custom",
     "breadcrumbs.enabled": false,
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
