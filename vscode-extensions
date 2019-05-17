@@ -11,7 +11,6 @@ code --install-extension mjmcloug.vscode-elixir
 code --install-extension ms-python.python
 code --install-extension ms-vscode.azure-account
 code --install-extension nwolverson.language-purescript
-code --install-extension pcanella.marko
 code --install-extension PeterJausovec.vscode-docker
 code --install-extension WallabyJs.quokka-vscode
 code --install-extension xabikos.JavaScriptSnippets
