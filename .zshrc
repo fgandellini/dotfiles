@@ -35,6 +35,7 @@ fi
 # Other aliases
 alias ngrok="~/ngrok"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias mux="tmuxinator"
 
 # Load antigen
 source ~/antigen.zsh
@@ -59,8 +60,38 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
 antigen bundle Tarrasch/zsh-autoenv
+antigen bundle bobsoppe/zsh-ssh-agent
 
+# Install and configure slimline
 antigen bundle mgee/slimline
+
+slimline::section::nodejs::init() {
+  return 1 # disable Node.js section in slimline
+}
+
+slimline::section::nodeprojectversion::precmd() {
+  unset slimline_section_nodeprojectversion_output
+}
+
+slimline::section::nodeprojectversion::async_task() {
+  builtin cd "${1}"
+  if [[ ! -f "package.json" ]]; then return; fi
+  command node --eval "console.log(require('./package.json').version)"
+}
+
+slimline::section::nodeprojectversion::async_task_complete() {
+  local output="${2}"
+  slimline_section_nodeprojectversion_output="${output}"
+}
+
+slimline::section::nodeprojectversion::render() {
+  if [[ -z "${slimline_section_nodeprojectversion_output}" ]]; then return; fi
+  slimline::utils::expand "nodejs" "%F{white}[%F{green}⬢ |version|%F{white}]%f" \
+      "version" "${slimline_section_nodeprojectversion_output}"
+}
+
+# Add nodeprojectversion to the right prompt
+export SLIMLINE_RIGHT_PROMPT_SECTIONS="|default| nodeprojectversion"
 
 # Tell antigen that you're done.
 antigen apply
