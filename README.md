@@ -38,3 +38,12 @@ Restore extensions with:
 ```
 ./vscode-extensions
 ```
+
+
+### GNOME Terminal theme
+
+Install the [One for GNOME Terminal](https://github.com/denysdovhan/one-gnome-terminal) theme with:
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh)"
+```
