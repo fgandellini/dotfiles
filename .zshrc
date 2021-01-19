@@ -13,6 +13,26 @@ setopt CORRECT
 # Set default editor to VSCode (mainly for tmuxinator)
 # export EDITOR="code"
 
+# deploy function, implemented with git push
+# adapted from
+# https://stackoverflow.com/questions/34340575/zsh-alias-with-parameter
+# https://stackoverflow.com/questions/15174121/how-can-i-prompt-for-yes-no-style-confirmation-in-a-zsh-script
+function deploy() {
+  local branch=$(git rev-parse --abbrev-ref HEAD)
+  if [ -n "$1" ]
+  then
+    if read -q "choice?Publish $branch to $1? (Y/y to confirm) "
+    then
+      echo
+      git push origin +$branch:$1
+    else
+      echo "Nothing published."
+    fi
+  else
+    echo "Error, you need to specify the destination environment! [ QA1 | QA2 ]"
+  fi
+}
+
 # Set git aliases
 # alias gt="git tag \`date +v%y.%m.%d.%H%M\` && git push origin --tags"
 alias glolaa="git log --all --graph --decorate --oneline --format=format:\"%C(bold blue)%h%C(reset) %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(yellow)%an%C(reset)%C(bold red)%d%C(reset)\""
@@ -60,7 +80,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search ./zsh-history-substring-search.zsh
 antigen bundle Tarrasch/zsh-autoenv
-antigen bundle bobsoppe/zsh-ssh-agent
+# antigen bundle bobsoppe/zsh-ssh-agent
 
 # Install and configure slimline
 antigen bundle mgee/slimline
