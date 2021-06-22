@@ -3,7 +3,6 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.tabSize": 2,
-    "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": false,
     "window.titleBarStyle": "custom",
     "breadcrumbs.enabled": false,
@@ -81,7 +80,6 @@
             "value": "#42b883"
         }
     ],
-    "gitlens.codeLens.enabled": false,
     "gitlens.views.repositories.location": "gitlens",
     "gitlens.views.fileHistory.location": "gitlens",
     "gitlens.views.lineHistory.location": "gitlens",
@@ -109,16 +107,15 @@
     "prettier.printWidth": 200,
     "prettier.arrowParens": "avoid",
     "editor.multiCursorModifier": "alt",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "eslint.format.enable": true,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "eslint.codeAction.showDocumentation": {
 
         "enable": true
-    }
+    },
+    "gitlens.codeLens.enabled": false,
+    "quokka.showStartViewOnFeatureRelease": false
 }
