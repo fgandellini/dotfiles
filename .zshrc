@@ -33,6 +33,11 @@ function deploy() {
   fi
 }
 
+# geolocate an ip address
+function geoloc() {
+  curl -s https://freegeoip.app/json/$1
+}
+
 # Set git aliases
 # alias gt="git tag \`date +v%y.%m.%d.%H%M\` && git push origin --tags"
 alias glolaa="git log --all --graph --decorate --oneline --format=format:\"%C(bold blue)%h%C(reset) %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(yellow)%an%C(reset)%C(bold red)%d%C(reset)\""
